@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Name: MyString
+  Measurement_Unit: 1
+  Price: 1
+  Quantity: 1
+  User_ID: 1
+
+two:
+  Name: MyString
+  Measurement_Unit: 1
+  Price: 1
+  Quantity: 1
+  User_ID: 1
