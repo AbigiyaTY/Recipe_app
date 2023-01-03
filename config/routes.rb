@@ -8,5 +8,5 @@ Rails.application.routes.draw do
     resources :recipe_foods
   end
   resources :public_recipes
-  resources :shopping_list
+  resources :general_shopping_list
 end
