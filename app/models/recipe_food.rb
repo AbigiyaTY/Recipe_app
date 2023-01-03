@@ -3,5 +3,4 @@ class RecipeFood < ApplicationRecord
   belongs_to :foods, class_name: 'Food', foreign_key: :Food_ID
 
   validates :Quantity, presence: true
-
 end

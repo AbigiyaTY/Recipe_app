@@ -6,5 +6,4 @@ class Recipe < ApplicationRecord
   validates :Preparation_Time, presence: true
   validates :Cooking_Time, presence: true
   validates :Decription, presence: true
-
 end
