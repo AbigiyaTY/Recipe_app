@@ -1,0 +1,26 @@
+<div >
+  <div >
+    <div >
+      <div>
+        <h3>
+          <%= link_to recipe.name, user_recipe_path(id: recipe.id, user_id: recipe.user.id), class: "card-title" %>
+        </h3>
+        <h5>By: <%= recipe.user.name %>
+        </h5>
+      </div>
+      <div>
+        <% if recipe.public %>
+          <span class="badge text-bg-warning p-2 px-4">Public</span>
+          <% else %>
+            <span class="badge text-bg-secondary p-2 px-4">Private</span>
+            <% end %>
+      </div>
+    </div>
+    <div class="card-body">
+      <span>Description</span>
+      <p class="card-text">
+        <%= recipe.description %>
+      </p>
+    </div>
+  </div>
+</div>
