@@ -22,7 +22,7 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   Maintenance database: postgres
   username: postgres
-  password: Elie
+  password: 12@34
   host: localhost
   port: 5432
 
@@ -87,5 +87,3 @@ test:
 production:
   <<: *default
   database: Recipe_app_production
-  username: Recipe_app
-  password: <%= ENV["RECIPE_APP_DATABASE_PASSWORD"] %>
