@@ -18,24 +18,21 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_03_185933) do
     t.string "Name"
     t.string "Measurement_Unit"
     t.integer "Price"
-    t.integer "Quantity"
-    t.integer "User_ID"
+    t.string "Quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "User_ID_id"
-    t.index ["User_ID_id"], name: "index_foods_on_User_ID_id"
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_foods_on_user_id"
   end
 
   create_table "recipe_foods", force: :cascade do |t|
     t.integer "Quantity"
-    t.integer "Recipe_ID"
-    t.integer "Food_ID"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "Food_ID_id"
-    t.bigint "Recipe_ID_id"
-    t.index ["Food_ID_id"], name: "index_recipe_foods_on_Food_ID_id"
-    t.index ["Recipe_ID_id"], name: "index_recipe_foods_on_Recipe_ID_id"
+    t.bigint "food_id", null: false
+    t.bigint "recipe_id", null: false
+    t.index ["food_id"], name: "index_recipe_foods_on_food_id"
+    t.index ["recipe_id"], name: "index_recipe_foods_on_recipe_id"
   end
 
   create_table "recipes", force: :cascade do |t|
@@ -44,11 +41,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_03_185933) do
     t.string "Cooking_Time"
     t.text "Decription"
     t.boolean "Public"
-    t.integer "User_ID"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "User_ID_id"
-    t.index ["User_ID_id"], name: "index_recipes_on_User_ID_id"
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_recipes_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -68,8 +64,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_03_185933) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "foods", "users", column: "User_ID_id"
-  add_foreign_key "recipe_foods", "foods", column: "Food_ID_id"
-  add_foreign_key "recipe_foods", "recipes", column: "Recipe_ID_id"
-  add_foreign_key "recipes", "users", column: "User_ID_id"
+  add_foreign_key "foods", "users"
+  add_foreign_key "recipe_foods", "foods"
+  add_foreign_key "recipe_foods", "recipes"
+  add_foreign_key "recipes", "users"
 end
