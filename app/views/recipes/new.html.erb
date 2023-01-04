@@ -1,6 +1,6 @@
 <div class="wrapper">
   <h2>Add New Recipe</h2>
-  <%= form_with model: @recipe, url: user_recipes_path(@user, @recipe), method: :post do |f| %>
+  <%= form_with model: @recipe, url: recipes_path, method: :post do |f| %>
     <div class="field">
       <%= f.label :name, class: "form-label" %><br />
         <%= f.text_field :name, autofocus: true, autocomplete: "name" , class: "form-control" %>
