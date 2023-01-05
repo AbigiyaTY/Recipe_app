@@ -1,9 +1,9 @@
 class Recipe < ApplicationRecord
-  belongs_to :users, class_name: 'User', foreign_key: :User_ID
-  has_many :recipe_foods, foreign_key: :Recipe_ID, dependent: :destroy
+  belongs_to :users, class_name: 'User', foreign_key: :user_id
+  has_many :recipe_foods, foreign_key: :recipe_id, dependent: :destroy
 
   validates :name, presence: true
-  validates :Preparation_Time, presence: true
-  validates :Cooking_Time, presence: true
-  validates :Decription, presence: true
+  validates :preparation_time, presence: true
+  validates :cooking_time, presence: true
+  validates :description, presence: true
 end

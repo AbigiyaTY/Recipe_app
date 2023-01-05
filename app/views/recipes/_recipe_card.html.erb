@@ -3,9 +3,9 @@
     <div >
       <div>
         <h3>
-          <%= link_to recipe.name, user_recipe_path(id: recipe.id, user_id: recipe.user.id), class: "card-title" %>
+          <%= link_to recipe.name, recipes_path, class: "card-title" %>
         </h3>
-        <h5>By: <%= recipe.user.name %>
+        <h5>By: <%= current_user.name %>
         </h5>
       </div>
       <div>
@@ -22,9 +22,9 @@
       <p class="card-text">
         <%= recipe.description %>
       </p>
-      <% if can? :manage, recipe %>
-        <%= button_to "Delete" , user_recipe_path(recipe.user, recipe.id), method: :delete, class: "btn btn-danger" %>
-          <% end %>
+     
+        <%= button_to "Delete" , recipe_path(id: recipe.id), method: :delete, class: "btn btn-danger" %>
+          
     </div>
   </div>
 </div>

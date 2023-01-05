@@ -22,7 +22,7 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   Maintenance database: postgres
   username: postgres
-  password: 12@34
+  password: Elie
   host: localhost
   port: 5432
 

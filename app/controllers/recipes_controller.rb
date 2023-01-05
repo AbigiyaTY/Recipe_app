@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   def index
-    @recipes = Recipe.where(user_id: current_user.id).order(created_at: :desc)
+    @recipes = Recipe.all
   end
 
   def public
@@ -8,7 +8,6 @@ class RecipesController < ApplicationController
   end
 
   def new
-    @user = current_user
     @recipe = Recipe.new
   end
 
@@ -21,7 +20,7 @@ class RecipesController < ApplicationController
     @recipe.delete
     respond_to do |format|
       format.html do
-        redirect_to user_recipes_path(user_id: @recipe.user.id), notice: 'Recipe was successfully deleted.'
+        redirect_to recipes_path, notice: 'Recipe was successfully deleted.'
       end
     end
   end
@@ -30,9 +29,9 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new(recipe_params)
     @recipe.user_id = current_user.id
     if @recipe.save
-      redirect_to user_recipes_path
+      redirect_to recipes_path, notice: 'Recipe is successfully created'
     else
-      render 'show'
+      render :new, alert: 'Recipe is not successfully created'
     end
   end
 
