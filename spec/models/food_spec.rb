@@ -1,4 +1,3 @@
-
 require 'rails_helper'
 
 RSpec.describe Food, type: :model do
@@ -9,7 +8,6 @@ RSpec.describe Food, type: :model do
   context 'validations' do
     it 'is valid with valid attributes' do
       food = Food.new(name: 'Apples', measurement_unit: 'pieces', price: 18, quantity: 24, user_id: @user.id)
-      
     end
 
     it 'is not valid without a name' do
@@ -37,6 +35,4 @@ RSpec.describe Food, type: :model do
       expect(food).to_not be_valid
     end
   end
-
-
 end

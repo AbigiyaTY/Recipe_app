@@ -6,7 +6,6 @@ RSpec.describe User, type: :model do
   end
 
   context 'validations' do
-
     it 'is not valid without a name' do
       @user.name = nil
       @user.save
@@ -28,5 +27,4 @@ RSpec.describe User, type: :model do
       expect(@user).to_not be_valid
     end
   end
-
 end

@@ -11,7 +11,6 @@ RSpec.describe RecipeFood, type: :model do
   context 'validations' do
     it 'is valid with valid attributes' do
       recipe = RecipeFood.new(recipe_id: @recipe.id, food_id: @food.id, quantity: 2)
-     
     end
 
     it 'is valid without a quantity' do

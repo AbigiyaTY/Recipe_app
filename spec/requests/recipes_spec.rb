@@ -7,5 +7,5 @@ RSpec.describe 'Public Recipes', type: :request do
     it 'returns correct response status' do
       expect(response).to have_http_status(302)
     end
-end
+  end
 end
