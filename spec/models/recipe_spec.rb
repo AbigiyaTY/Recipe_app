@@ -9,6 +9,7 @@ RSpec.describe Recipe, type: :model do
     it 'is valid with valid attributes' do
       recipe = Recipe.new(name: 'Apples', preparation_time: '1 hour', cooking_time: '30 minutes',
                           description: 'Lorem ipsum', public: false, user_id: @user.id)
+      expect(recipe).to_not be_valid
     end
 
     it 'is not valid without a name' do
