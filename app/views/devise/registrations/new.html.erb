@@ -1,32 +1,43 @@
-<h2>Sign up</h2>
+<div id="singup" class= "container userBG py-3">
+<h2 class="welcome  text-center">Welcome to the Sign up Page</h2>
+<div class="sign-up-container">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false }) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
- <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
-  </div>
+
+<div class= "row">
+<div class= "col-4"></div>
+<div class= "col-5">
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.label :name, class: "flabel" %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "finput" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :email, class: "flabel" %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "finput" %>
+  </div>
+    <div class="field">
+    <%= f.label :password, class: "flabel" %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password, autocomplete: "new-password", class: "finput" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.label :password_confirmation, class: "flabel" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "finput" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+  <div class="actions submit my-3">
+    <%= f.submit "Sign up", data: { turbo: false}, class: "sign-up-btn" %>
   </div>
+</div>
+<div class= "col-4"></div>
+</div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
+</div>

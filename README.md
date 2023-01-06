@@ -35,30 +35,26 @@ After you're finished please remove all the comments and instructions!
 
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
-- [📝 License](#license)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Recipe APP WITH ROR ](#-recipe-app-with-ror-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 Recipe APP WITH ROR <a name="about-project"></a>
-The Recipe app will be a classic example of a Recipe website. You will creat a fully functional website that will show the list of post and empower readers to interact with them by adding comments and likes posts
+The Recipe app keeps track of all your recipes and ingredients. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app should allow you to make them public so anyone can access them.
 
 ## 🛠 Built With <a name="built-with"></a>
 -ROR
@@ -91,91 +87,52 @@ The Recipe app will be a classic example of a Recipe website. You will creat a f
 ### Key Features <a name="key-features"></a>
  
 
-- **Create a Recipe post**
-- **Give like, comment for the post** 
-
-
+- **Create a Recipe app**
+- **track of what food you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe** 
 
 
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-
-
-To get a local copy up and running, follow these steps.
+**To get a local copy up and running, follow these steps.**
+1. Open terminal or cmd on you local machine and navigate to your desired directory.
+2. **Run**    *'git clone clone https://github.com/AbigiyaTY/Recipe_app.git'*
+3. **Run**   *'code'*
 
 ### Prerequisites
+In order to run this project you need **[describe prerequisites]**:
 
-In order to run this project you need:
-
-Ruby version : ruby 3.1.2p20 run ruby -v
-Ruby SQLite3 : 3.40.0 run sqlite3 --version
-npm version : 8.15.0 run npm -v
-yarn version : 1.22.19 run yarn -v
-Database : PostgreSQL
-
+```sh
+ gem install rails
+```
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
-
 ```sh
-  cd my-folder
   git clone https://github.com/AbigiyaTY/Recipe_app.git
-
+  cd Recipe_app
 ```
---->
 
 ### Install
 
-Install this project with:
-
-<!--
-bundler install
+Install this project with **[package manager]**:
 
 ```sh
+  cd Blog_app
+  gem install
+  rails db:migrate
 
-
+```
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
-Example command:
-
 ```sh
   rails server
 ```
---->
-
-### Run tests
-
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
-
-### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
@@ -194,7 +151,14 @@ Example:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- FUTURE FEATURES -->
 
+## 🔭 Future Features <a name="future-features"></a>
+
+> Features of this project.
+
+- [ ] **User Authentication**
+- [ ] **CRUD Operations**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -234,7 +198,7 @@ I would like to thank...
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./MIT.md) licensed.
 
 _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
