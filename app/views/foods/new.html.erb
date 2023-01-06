@@ -1,0 +1,24 @@
+<%= form_with model: @food, url: foods_path, method: :post, scope: :food do |form| %>
+<div class="container">
+    <h2 class="my-5">Create New Food</h2>
+  <div>
+    <%= form.text_field  :name, placeholder: 'Name', size: "30x10" %> 
+  </div>
+  <br>
+  <div>
+    <%= form.text_field  :measurement_unit, placeholder: 'Measurement_Unit', size: "30x10" %> 
+  </div>
+  <br>
+  <div>
+    <%= form.text_field  :price, placeholder: 'Price', size: "30x10" %> 
+  </div>
+  <br>
+  <div>
+    <%= form.text_field  :quantity, placeholder: 'Quantity', size: "30x10" %> 
+  </div>
+  <br>
+  <div>
+    <%= form.submit 'Add Food' %>
+  </div>
+</div>
+<% end %>

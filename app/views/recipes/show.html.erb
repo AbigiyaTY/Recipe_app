@@ -1,0 +1,59 @@
+<div class= 'container'>
+    <h1 class="my-5 text-center"><%= @recipe.name %></h1>
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-10">
+        <div class="row">
+          <div class="col py-3">
+            <h4>Preparation Time: <%= @recipe.preparation_time %></h4>
+          </div>
+          <div class="col  py-3">
+            <% if @recipe.public %>
+              <span class="badge text-bg-warning p-2 px-4">Public</span>
+              <% else %>
+                <span class="badge text-bg-secondary p-2 px-4">Private</span>
+            <% end %>
+          </div>
+          <div class="row">
+            <div class="col  py-3">
+              <h4>Cooking Time: <%= @recipe.cooking_time %></h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col  py-3">
+              <h4>Steps go here...</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2"></div>
+    </div>
+</div>
+<div class= 'container'>
+<div class= "my-5">
+  <%= link_to "Add ingredient", new_recipe_recipe_food_path(recipe_id: @recipe.id), class: "addFood" %>
+</div>
+<table class="table table-striped my-5 container foodTable">
+  <thead>
+    <tr> 
+      <th scope="col">Food</th>
+      <th scope="col">Value</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% RecipeFood.where(recipe_id: params[:id]).each do |rf| %>
+      <tr>
+        <td><%= rf.foods.name%></td>
+        <td>$<%= rf.foods.price%></td>
+        <td><%= rf.foods.quantity%></td>
+        <td><%= button_to 'DELETE', recipe_recipe_food_path(recipe_id:@recipe.id, id: rf.id), method: :delete, class: 'btn btn-outline-danger' %>
+      </tr>
+      <%end%>
+      <% if RecipeFood.all.empty? %>
+        <h1>There are no recipe foods to show</h1>
+      <%else%>
+    <% end %>
+  </tbody>
+</table>

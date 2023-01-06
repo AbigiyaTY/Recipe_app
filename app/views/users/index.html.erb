@@ -1,0 +1,14 @@
+<div >
+
+  <h1>Users List</h1>
+  <% @users.each do |user| %>
+    <div >
+      <ul >
+        <%= render partial: 'users/users_list', locals: { user: user } %>
+    </ul>
+  </div>
+  <% end %>
+  <% if @users.empty? %>
+    <h1>There are no users to show</h1>
+  <% end %>
+</div>

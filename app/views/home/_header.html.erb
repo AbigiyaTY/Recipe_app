@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <%= link_to 'Recipe App', root_path, class: 'navbar-brand' %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%= link_to 'Food', foods_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Recipe', recipes_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Public Recipe', public_recipes_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'General shopping list ', general_shopping_list_path(:id), class: 'nav-link' %>
+        </li>
+        
+      </ul>
+      <form class="d-flex">
+        <p class="nav-item text-secondary mx-5 py-2">
+          Logged in as 
+          <strong><%= current_user.name %></strong>
+        </p>
+      </form>
+    </div>
+  </div>
+  
+</nav>
