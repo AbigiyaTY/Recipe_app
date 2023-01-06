@@ -1,6 +1,8 @@
 <div >
-  <h1>Recipe List</h1>
-  <%= link_to "Add New Recipe", new_recipe_path, class: "btn btn-success" %>
+<div class= 'container'>
+<div class= "my-5">
+  <%= link_to "Add New Recipe", new_recipe_path, class: "addFood" %>
+</div>
   <% @recipes.each do |recipe| %>
     <%= render partial: 'recipes/recipe_card', locals: { recipe: recipe, user_id: recipe.id } %>
   <% end %>

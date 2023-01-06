@@ -1,22 +1,22 @@
-<div class="wrapper">
-  <h2>Add New Recipe</h2>
+<div class="wrapper container">
+  <h2 class="my-5">Add New Recipe</h2>
   <%= form_with model: @recipe, url: recipes_path, method: :post do |f| %>
     <div class="field">
       <%= f.label :name, class: "form-label" %><br />
-        <%= f.text_field :name, autofocus: true, autocomplete: "name" , class: "form-control" %>
+        <%= f.text_field :name, autofocus: true, autocomplete: "name", size: "30x10" %>
     </div>
     <div class="field">
       <%= f.label :preparation_time, class: "form-label" %><br />
         <%= f.text_field :preparation_time, autofocus: true, autocomplete: "preparation_time" ,
-          class: "mb-3 form-control" %>
+          class: "mb-3", size: "30x10" %>
     </div>
     <div class="field">
       <%= f.label :cooking_time, class: "form-label" %><br />
-        <%= f.text_field :cooking_time, autofocus: true, autocomplete: "cooking_time" , class: "mb-3 form-control" %>
+        <%= f.text_field :cooking_time, autofocus: true, autocomplete: "cooking_time" , class: "mb-3" , size: "30x10" %>
     </div>
     <div class="field">
       <%= f.label :description, class: "form-label" %><br />
-        <%= f.text_area :description, autofocus: true, autocomplete: "description" , class: "mb-3 form-control" %>
+        <%= f.text_area :description, autofocus: true, autocomplete: "description" , class: "mb-3", size: "33x5" %>
     </div>
     <div class="field">
      <%= f.label :public %>
