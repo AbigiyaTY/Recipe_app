@@ -12,3 +12,26 @@
 .gTable {
   border: 5px solid #000;
 }
+
+.userBG,
+.ebdShow {
+  background-color: rgb(51, 94, 124);
+  color: #fff;
+}
+
+.bioText {
+  color: #fff;
+}
+
+#singup {
+  margin-top: 5%;
+}
+
+.SignBlog {
+  margin-left: 3%;
+}
+
+.submit input:hover {
+  color: #fff;
+  background: #000;
+}
