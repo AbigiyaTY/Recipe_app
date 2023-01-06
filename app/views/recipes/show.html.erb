@@ -43,12 +43,12 @@
     </tr>
   </thead>
   <tbody>
-    <% RecipeFood.all.each do |rf| %>
+    <% RecipeFood.where(recipe_id: params[:id]).each do |rf| %>
       <tr>
         <td><%= rf.foods.name%></td>
         <td>$<%= rf.foods.price%></td>
         <td><%= rf.foods.quantity%></td>
-        <td><%= button_to 'DELETE', recipe_recipe_food_path(recipe_id:@recipe.id, id: rf.id), method: :delete %><%= button_to 'UPDATE', edit_recipe_recipe_food_path(recipe_id:@recipe.id, id: rf.id), method: :delete %> </td>
+        <td><%= button_to 'DELETE', recipe_recipe_food_path(recipe_id:@recipe.id, id: rf.id), method: :delete %>
       </tr>
       <%end%>
       <% if RecipeFood.all.empty? %>

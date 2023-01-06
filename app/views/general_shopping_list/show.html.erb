@@ -1,0 +1,33 @@
+<div class= 'container'>
+    <h1 class="text-center my-5">Shopping List</h1>
+    <div class="row py-3">
+      <div class="col-2"></div>
+      <div class="col-4">
+        Amount of item to buy: <%= @final_list.size %>
+      </div>
+      <div class="col-4">
+        Total value of food needed: $ <%= @total %>
+      </div>
+      <div class="col-2"></div>
+    </div>
+    <table class="table table-striped my-3 container gTable">
+      <thead>
+          <tr> 
+          <th scope="col">Food</th>
+          <th scope="col">Quatity</th>
+          <th scope="col">Price</th>
+          <th scope="col">Total</th>
+          </tr>
+      </thead>
+      <tbody>
+        <% @final_list.each do |i| %>
+          <tr>
+          <td><%= i.name %></td>
+          <td><%= i.quantity %></td>
+          <td><%= "$#{ i.price }" %></td>
+          <td><%= "$#{ i.price.to_i * i.quantity.to_i }" %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+</div>
