@@ -8,6 +8,7 @@
 }
 
 .bgc1,
-.foodTable {
+.foodTable,
+.gTable {
   border: 5px solid #000;
 }
