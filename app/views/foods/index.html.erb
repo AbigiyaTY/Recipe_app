@@ -1,0 +1,28 @@
+<div class= 'container'>
+<div class= "my-5">
+  <%= link_to "New Food", new_food_path, class: "addFood" %>
+</div>
+<table class="table table-striped my-5 container foodTable">
+<thead>
+    <tr> 
+      <th scope="col">Food</th>
+      <th scope="col">Measurement Unit</th>
+      <th scope="col">Unit Price</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @foods.each do |food| %>
+    <tr>
+      <td><%= food.name%></td>
+      <td><%= food.measurement_unit%></td>
+      <td>$<%= food.price%></td>
+      <td><%= food.quantity%></td>
+      <td><%= button_to 'DELETE', food_path(id: food.id), method: :delete, class: "btn btn-outline-danger" %></td>  
+    </tr>
+    <%end%>
+  </tbody>
+</table>
+
+</div>

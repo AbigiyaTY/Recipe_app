@@ -1,0 +1,28 @@
+<h1 class="text-center my-5">Public Recipes</h1>
+<div class="container bgc1 my-5">
+  <% @recipes.each do |recipe| %>
+    <%= link_to recipe_path(recipe.id),class:"text-decoration-none row" do %>
+    <div class="row">
+      <div class="col py-3">
+        <h2 class="card-title"><%= recipe.name %></h2>
+      </div>
+      <div class="col  py-3  text-black">
+        <p class="px-3">By: <%= recipe.users.name %> </p>
+      </div>
+    </div>
+    <div>
+      <div class="col  py-3">
+        <h5 class= "text-black">Total foods items: <%= recipe.recipe_foods.includes(:food).count%>
+        </h5>
+      </div>
+      <div class="col  py-3 text-black">
+          <% sum = 0 %>
+          <% recipe.recipe_foods.includes(:foods).each do |food| %>
+          <% sum += food.quantity * food.foods.price %>
+          <% end %>
+          <%= "Total price: $#{sum}" %>
+          </div>
+          <% end %>
+      </div>
+  <% end %>
+</div>
