@@ -1,4 +1,4 @@
-<!-- TABLE OF CONTENTS -->
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # 📗 Table of Contents
 
