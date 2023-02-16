@@ -18,14 +18,16 @@
         <li class="nav-item">
           <%= link_to 'General shopping list ', general_shopping_list_path(:id), class: 'nav-link' %>
         </li>
-        
       </ul>
-      <form class="d-flex">
+      <%# <form class="d-flex">
         <p class="nav-item text-secondary mx-5 py-2">
           Logged in as 
-          <strong><%= current_user.name %></strong>
-        </p>
-      </form>
+          <strong class="userName"><%= current_user.name</strong>
+        <%# </p> %>
+      <%# <li class="nav-item"> %>
+          <%# <%= link_to 'logout', destroy_user_session_path, data: {turbo: false}, method: :delete, class: "btn btn-danger" %>
+        <%# </li>  %>
+      <%# </form>  %>
     </div>
   </div>
   

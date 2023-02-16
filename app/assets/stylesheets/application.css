@@ -13,6 +13,10 @@
   border: 5px solid #000;
 }
 
+.userName {
+  color: #fff !important;
+}
+
 .userBG,
 .ebdShow {
   background-color: rgb(51, 94, 124);
