@@ -3,6 +3,7 @@ default: &default
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
+
 development:
   <<: *default
   database: Recipe_app
@@ -13,4 +14,6 @@ test:
 
 production:
   <<: *default
-  url: <%= ENV["DATABASE_URL"]%>
+  database: scalingo_production
+  username: scalingo
+  password: <%= ENV["SCALINGO_DATABASE_PASSWORD"] %>
