@@ -7,6 +7,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -56,6 +57,15 @@ The Recipe app keeps track of all your recipes and ingredients. It will allow yo
 
 - **Create a Recipe app**
 - **track of what food you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe** 
+
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+ 
+- [Live Demo Link](https://recipe-app.osc-fr1.scalingo.io/)
+
+<p align="right"><a href="#readme-top">back to top</a></p>
 
 
 <!-- GETTING STARTED -->
