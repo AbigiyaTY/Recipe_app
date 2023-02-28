@@ -28,8 +28,6 @@ The Recipe app keeps track of all your recipes and ingredients. It will allow yo
 -ROR
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
 <details>
   <summary>Client</summary>
   <ul>
