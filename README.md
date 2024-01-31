@@ -120,9 +120,9 @@ To run the project, execute the following command:
 
 👤 **Abigiya Tadesse**
 
-* GitHub: [@githubhandle](https://github.com/AbigiyaTY)
-* Twitter: [@twitterhandle](https://twitter.com/AbigiyaTY)
-* LinkedIn: [@LinkedIn](https://www.linkedin.com/in/AbigiyaTY)
+* GitHub: [@AbigiyaTY](https://github.com/AbigiyaTY)
+* Twitter: [@AbigiyaTY](https://twitter.com/AbigiyaTY)
+* LinkedIn: [@AbigiyaTY](https://www.linkedin.com/in/AbigiyaTY)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
