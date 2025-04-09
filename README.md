@@ -59,12 +59,13 @@ The Recipe app keeps track of all your recipes and ingredients. It will allow yo
 
 <!-- LIVE DEMO -->
 
+<!--
 ## 🚀 Live Demo <a name="live-demo"></a>
  
 - [Live Demo Link](https://recipe-app.osc-fr1.scalingo.io/)
 
 <p align="right"><a href="#readme-top">back to top</a></p>
-
+ -->
 
 <!-- GETTING STARTED -->
 
